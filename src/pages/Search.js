@@ -36,7 +36,7 @@ export default function Search() {
         <Sidebar/>
         {
           searchResults.length ? (
-            <div className='py-8 pl-8 flex flex-col gap-5 w-full'>
+            <div className='py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:pl-8 flex flex-col gap-4 sm:gap-5 w-full md:ml-56'>
                 <InfiniteScroll 
                 dataLength={searchResults.length} 
                 next={()=>dispatch(getSearchPageVideos(true))}
@@ -47,7 +47,7 @@ export default function Search() {
                     {
                     searchResults.map((item)=>{
                         return (
-                            <div className='my-5' key={item.videoId}>
+                            <div className='my-3 sm:my-4 md:my-5' key={item.videoId}>
                                 <SearchCard data={item}/>
                             </div>
                         )
@@ -56,7 +56,9 @@ export default function Search() {
                 </InfiniteScroll>
             </div>
           ):(
-            <Spinner/>
+            <div className='w-full md:ml-56 flex items-center justify-center'>
+              <Spinner/>
+            </div>
           )
         } 
       </div>

@@ -3,27 +3,27 @@ import { Link } from 'react-router-dom'
 
 export default function SearchCard({ data }) {
   return (
-    <div className='flex gap-3'>
-        <div className='relative'>
+    <div className='flex flex-col md:flex-row gap-3'>
+        <div className='relative w-full md:w-auto'>
             <span className='absolute bottom-3 right-3 text-sm bg-gray-900 px-2 py-0.5 z-10'>
                 {data.videoDuration}
             </span> 
-            <Link to={`/watch/${data.videoId}`}>
+            <Link to={`/watch/${data.videoId}`} className='block w-full'>
                 <img 
                     src={data.videoThumbnail} 
                     alt='Thumbnail' 
-                    className='h-52 w-96'
+                    className='w-full md:w-96 md:h-52 h-auto object-cover rounded-lg'
                 />
             </Link>
         </div>
 
-        <div className='flex gap-1 flex-col'>
+        <div className='flex gap-1 flex-col flex-1'>
             <h3 className='max-w-2xl'>
-                <a href='/#' className='line-clamp-2'>
+                <a href='/#' className='line-clamp-2 text-sm sm:text-base'>
                     {data.videoTitle}
                 </a>
             </h3>
-            <div>
+            <div className='text-xs sm:text-sm text-gray-400'>
                 <span>{data.videoViews} views</span>
                 <span> • {data.videoAge}</span>
             </div>
@@ -35,11 +35,11 @@ export default function SearchCard({ data }) {
                         alt='channel'
                         className='h-9 w-9 rounded-full'
                     />
-                    <span>{data?.channelInfo?.name}</span>
+                    <span className='line-clamp-1'>{data?.channelInfo?.name}</span>
                 </a>
             </div>
 
-            <p className='max-w-2xl line-clamp-2 text-sm text-gray-400'>
+            <p className='max-w-2xl line-clamp-2 text-sm text-gray-400 hidden md:block'>
                 {data.videoDescription}
             </p>
         </div>

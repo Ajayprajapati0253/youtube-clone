@@ -26,43 +26,44 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between px-14 h-14 items-center bg-[#212121] opacity-95 sticky">
-      <div className="flex gap-8 items-center text-2xl ">
-        <div>
+    <div className="flex justify-between px-2 sm:px-4 md:px-14 h-14 items-center bg-[#212121] opacity-95 sticky top-0 z-50">
+      <div className="flex gap-2 sm:gap-4 md:gap-8 items-center text-xl sm:text-2xl">
+        <div className="md:hidden">
           <GiHamburgerMenu />
         </div>
-        <div className="flex gap-2 items-center justify-center">
-          <BsYoutube className="text-3xl text-red-700" />
-          <span className="text-2xl">Youtube</span>
+        <div className="flex gap-1 sm:gap-2 items-center justify-center">
+          <BsYoutube className="text-2xl sm:text-3xl text-red-700" />
+          <span className="text-lg sm:text-xl md:text-2xl hidden sm:inline">Youtube</span>
         </div>
       </div>
-      <div className="flex items-center justify-center gap-5">
+      <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-5 flex-1 max-w-2xl mx-2 md:mx-0">
         <form
           onSubmit={(e) => {
             e.preventDefault();
             handleSearch();
           }}
+          className="w-full"
         >
-          <div className="flex bg-zinc-900 items-center h-10 px-4 pr-2 rounded-3xl">
-            <div className="flex gap-5 items-center pr-5">
+          <div className="flex bg-zinc-900 items-center h-8 sm:h-10 px-2 sm:px-4 pr-1 sm:pr-2 rounded-3xl">
+            <div className="flex gap-2 sm:gap-5 items-center pr-2 sm:pr-5 flex-1">
               <input
                 type="text"
                 placeholder="Search"
-                className="w-96 bg-zinc-900 focus:outline-none border-none"
+                className="w-full bg-zinc-900 focus:outline-none border-none text-sm sm:text-base"
                 value={searchTerm}
                 onChange={e=>dispatch(changeSearchTerm(e.target.value))}
               />
             </div>
-            <button className="h-10 w-16 flex items-center justify-center bg-zinc-800 rounded-r-3xl">
-              <AiOutlineSearch className="text-xl" />
+            <button className="h-8 sm:h-10 w-10 sm:w-16 flex items-center justify-center bg-zinc-800 rounded-r-3xl">
+              <AiOutlineSearch className="text-lg sm:text-xl" />
             </button>
           </div>
         </form>
-        <div className="text-xl p-3 bg-zinc-900 rounded-full">
+        <div className="hidden md:block text-xl p-3 bg-zinc-900 rounded-full">
           <FaMicrophone />
         </div>
       </div>
-      <div className="flex gap-8 items-center text-xl">
+      <div className="hidden md:flex gap-8 items-center text-xl">
         <RiVideoAddLine />
         <div className="relative">
           <BsBell />

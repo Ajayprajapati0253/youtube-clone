@@ -33,7 +33,7 @@ const Home = () => {
               loader={<Spinner/>}
               height={650}
             >
-              <div className='grid gap-y-14 gap-x-8 grid-cols-4 p-8'>
+              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 w-full md:ml-56'>
                 {
                   videos.map((item)=>{
                     return <Card data={item} key={item.videoId}/>
@@ -42,7 +42,9 @@ const Home = () => {
               </div>
             </InfiniteScroll>
           ):(
-            <Spinner/>
+            <div className='w-full md:ml-56 flex items-center justify-center'>
+              <Spinner/>
+            </div>
           )
         } 
       </div>

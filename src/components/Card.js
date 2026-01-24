@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 export default function Card({data}) {
   return (
-    <div className='w-64 h-60 flex gap-3 flex-col'>
-        <div className='relative'>
+    <div className='w-full flex gap-3 flex-col'>
+        <div className='relative w-full'>
             <span className='absolute bottom-3 right-3 text-sm bg-gray-900 px-2 py-0.5 z-10'>
                 {data.videoDuration}
             </span>
-            <Link to={`/watch/${data.videoId}`}>
+            <Link to={`/watch/${data.videoId}`} className='block w-full'>
                 <img src={data.videoThumbnail} 
-                    alt='Thumbnail' className='h-44 w-72'
+                    alt='Thumbnail' className='w-full h-auto aspect-video object-cover rounded-lg'
                 />
             </Link>
         </div>
@@ -20,15 +20,15 @@ export default function Card({data}) {
                     alt='channel img' className='h-9 w-9 rounded-full'/>
                 </a>
             </div>
-            <div>
+            <div className='flex-1 min-w-0'>
                 <h3>
-                    <a href='/#' className='line-clamp-2'>
+                    <a href='/#' className='line-clamp-2 text-sm sm:text-base'>
                         {data.videoTitle}
                     </a>
                 </h3>
-                <div className='text-sm text-gray-400'>
+                <div className='text-xs sm:text-sm text-gray-400'>
                     <div>
-                        <a href='/#' className='hover:text-white'>
+                        <a href='/#' className='hover:text-white line-clamp-1'>
                             {data.channelInfo.name}
                         </a>
                     </div>
