@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+﻿# 🎬 YouTube Clone – Production Ready React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, production-ready **YouTube Clone** built with **React** that consumes live data from the **YouTube Data API v3**.  
+This project demonstrates real-world frontend development practices including state management, API integration, environment security, and cloud deployment.
 
-## Available Scripts
+🌐 **Live Demo:** https://youtube-clone-15ca.onrender.com  
+📂 **Source Code:** https://github.com/Ajayprajapati0253/youtube-clone
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔍 Real-time video search
+- 📺 Video playback with details
+- 📃 Dynamic video feed
+- ⚡ Fast & responsive UI
+- 🧠 Centralized state management
+- 🔐 Secure API key handling
+- 🚀 Cloud deployment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Category | Technology |
+|-------|-----------|
+| Frontend | React (Create React App) |
+| State | Redux Toolkit |
+| Styling | Tailwind CSS |
+| API | YouTube Data API v3 |
+| HTTP | Axios |
+| Deployment | Render (Static Site) |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🏗️ Architecture Overview
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Component-based UI design
+- Redux slices for predictable state flow
+- API abstraction using Axios
+- Environment-based configuration
+- Static site hosting with CDN
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Folder Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+youtube-clone/
+├── public/
+├── src/
+│  ├── components/
+│  ├── redux/
+│  ├── pages/
+│  ├── utils/
+│  └── App.js
+├── .env.example
+├── package.json
+└── README.md
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔐 Environment Variables
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a `.env` file in the root directory and add your YouTube API key:
 
-## Learn More
+```env
+REACT_APP_YOUTUBE_DATA_API_KEY=your_api_key_here
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📸 Screenshots
 
-### Code Splitting
+### 🏠 Home Page
+![Home Page](assets/screenshots/home.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 🔍 Search Results
+![Search Results](assets/screenshots/search.png)
 
-### Analyzing the Bundle Size
+### ▶️ Watch Page (Desktop)
+![Watch Page Desktop](assets/screenshots/desktop-watch.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 📱 Home Page (Mobile)
+![Mobile Home](assets/screenshots/mobile.png)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 📱 Watch Page (Mobile)
+![Mobile Watch](assets/screenshots/mobile-watch.png)
