@@ -45,14 +45,17 @@ This project demonstrates real-world frontend development practices including st
 
 ## 📁 Folder Structure
 
+📁 Folder Structure
+
+```text
 youtube-clone/
 ├── public/
 ├── src/
-│  ├── components/
-│  ├── redux/
-│  ├── pages/
-│  ├── utils/
-│  └── App.js
+│   ├── components/
+│   ├── redux/
+│   ├── pages/
+│   ├── utils/
+│   └── App.js
 ├── .env.example
 ├── package.json
 └── README.md
